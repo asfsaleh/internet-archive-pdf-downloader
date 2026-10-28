@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internet Archive PDF Downloader</title>
+  <style>
+    body {
+      width: 350px;
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      font-size: 13px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #38bdf8;
+      white-space: nowrap;
+    }
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 10px;
+      background: #1e3a8a;
+      color: #93c5fd;
+    }
+    .status-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+    .status-label {
+      color: #94a3b8;
+    }
+    .status-val {
+      font-weight: 600;
+      color: #f1f5f9;
+      font-family: monospace;
+      max-width: 190px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .btn {
+      width: 100%;
+      padding: 11px;
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      transform: translateY(-1px);
+    }
+    .features-list {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #334155;
+      font-size: 11px;
+      color: #94a3b8;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .features-list div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icon32.png" width="24" height="24" style="border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.3);" alt="Logo" />
+    <h2>Internet Archive PDF Downloader</h2>
+    <span class="badge">v3.4</span>
+  </div>
+  
+  <div class="status-card">
+    <div class="status-row">
+      <span class="status-label">Active Host:</span>
+      <span class="status-val" id="pop-origin">Analyzing...</span>
+    </div>
+    <div class="status-row">
+      <span class="status-label">Detected Book:</span>
+      <span class="status-val" id="pop-bookid" style="color: #60a5fa;">Analyzing...</span>
+    </div>
+    <div class="status-row">
+      <span class="status-label">Status:</span>
+      <span class="status-val" id="pop-status" style="color: #34d399;">Ready</span>
+    </div>
+  </div>
+
+  <button class="btn" id="pop-btn-open">⚡ Open Control Center in Tab</button>
+  
+  <div class="features-list">
+    <div>✓ Universal Internet Archive & Mirror Support</div>
+    <div>✓ Native AES-CTR Decryption Engine</div>
+    <div>✓ Parallel Streamer with Auto-Retry</div>
+    <div>✓ Embedded PDF Metadata (Title, Author)</div>
+  </div>
+
+  <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #94a3b8;">
+    <span>Crafted with ❤️ by</span>
+    <a href="https://abusaleh.pro.bd/" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Abu Saleh ↗</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
