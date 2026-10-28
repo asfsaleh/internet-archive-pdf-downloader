@@ -4,7 +4,7 @@
   "version": "3.4.0",
   "description": "Production-grade book downloader & PDF exporter for Internet Archive, Open Library, and BookReader sites.",
   "author": "Abu Saleh (https://abusaleh.pro.bd/)",
-  "homepage_url": "https://abusaleh.pro.bd/",
+  "homepage_url": "https://abusaleh.pro.bd/pdfdownloader/",
   "permissions": [
     "activeTab",
     "scripting"
